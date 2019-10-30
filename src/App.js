@@ -1,33 +1,36 @@
 import React from "react";
+import PropTypes from "prop-types";
+import { withRouter } from "react-router";
 import { Route, Switch, Redirect } from "react-router-dom";
 
-import NavBar from "./components/NavBar";
+import NavBar from "./components/template/NavBar";
+import Footer from "./components/template/Footer";
+
 import NotFoundPage from "./components/pages/NotFoundPage";
 import HomePage from "./components/pages/HomePage";
 
-import Footer from "./components/Footer";
-
 class App extends React.Component {
+  static propTypes = {
+    match: PropTypes.object.isRequired,
+    location: PropTypes.object.isRequired,
+    history: PropTypes.object.isRequired
+  };
+
   render() {
     return (
-      <div>
+      <div className="d-flex flex-column vh-100">
         <NavBar />
-        <div className="content">
-          <Switch>
-            <Route path="/not-found" component={NotFoundPage} />
 
-            {/*
-              Add your page-component here
-              */}
+        <Switch>
+          <Route path="/not-found" component={NotFoundPage} />
+          <Route path="/" exact component={HomePage} />
+          <Redirect to="/not-found" />
+        </Switch>
 
-            <Route path="/" exact component={HomePage} />
-            <Redirect to="/not-found" />
-          </Switch>
-        </div>
         <Footer />
       </div>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
