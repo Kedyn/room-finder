@@ -28,7 +28,7 @@ export default class HomePage extends Component {
         <main role="main" className="flex-grow-1 d-flex align-items-center">
           <Container className="text-center">
             <h1 className="mb-5">
-              Find your next roommate.
+              Find your next roommate here.
               <br />
               Search for your new room.
               <br />
