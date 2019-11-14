@@ -107,11 +107,11 @@ export default class Register extends Component {
               <Col>
                 <Form.Group controlId="gender">
                   <Form.Control as="select" required>
-                    <option disabled selected value>
+                    <option disabled selected defaultValue="">
                       Gender
                     </option>
-                    <option>Male</option>
-                    <option>Female</option>
+                    <option defaultValue="male">Male</option>
+                    <option defaultValue="female">Female</option>
                   </Form.Control>
                   <Form.Control.Feedback type="invalid">
                     Please choose a gender.
