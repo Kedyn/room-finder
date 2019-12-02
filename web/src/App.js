@@ -8,6 +8,7 @@ import Footer from "./components/template/Footer";
 
 import NotFoundPage from "./components/pages/NotFoundPage";
 import HomePage from "./components/pages/HomePage";
+import ProfilePage from "./components/pages/ProfilePage";
 
 class App extends React.Component {
   static propTypes = {
@@ -24,6 +25,7 @@ class App extends React.Component {
         <Switch>
           <Route path="/not-found" component={NotFoundPage} />
           <Route path="/" exact component={HomePage} />
+          <Route path="/profile" component={ProfilePage} />
           <Redirect to="/not-found" />
         </Switch>
 
