@@ -1,14 +1,11 @@
 import React, { Component } from "react";
 
-const ProfileArea = (username, emailAddress) => {
+const ProfileArea = props => {
   return (
     <div>
-      <h1>Profile for {username}</h1>
-      <ul>
-        <li>Email address: {emailAddress}</li>
-      </ul>
+      <p>Name: {props.username}</p>
+      <p>Email: {props.emailAddress}</p>
     </div>
   );
 };
-
 export default ProfileArea;
