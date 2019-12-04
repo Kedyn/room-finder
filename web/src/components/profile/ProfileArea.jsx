@@ -1,11 +1,19 @@
 import React, { Component } from "react";
 
-const ProfileArea = props => {
+const ProfileInfo = props => {
+  const { name, emailAddress } = props;
   return (
     <div>
-      <p>Name: {props.username}</p>
-      <p>Email: {props.emailAddress}</p>
+      <p>
+        <b>Name: </b>
+        {name}
+      </p>
+      <p>
+        <b>Email: </b>
+        {emailAddress}
+      </p>
+      <hr />
     </div>
   );
 };
-export default ProfileArea;
+export default ProfileInfo;

@@ -1,18 +1,24 @@
 import React, { Component } from "react";
-import ProfileArea from "./ProfileArea";
+import ProfileInfo from "./ProfileArea";
 import dog from "golden-retriever-puppy.jpg";
-import avatar from "./Profile.css";
+import ProfilePicture from "./ProfilePicture";
 
 class ProfilePage extends Component {
+  state = {
+    user: "Landlord",
+    name: "Phuc",
+    emailAddress: "asdf@gmail.com"
+  };
   render() {
+    let { user, name, emailAddress } = this.state;
     return (
       <div className="container">
         <div style={{ padding: "40px" }} className="row">
           <div className="col s12 m6">
-            <img style={avatar} src={dog} width="400" length="300" />
+            <ProfilePicture user={user} picture={dog} />
           </div>
           <div className="col s12 m6 offset-m1">
-            <ProfileArea username="Phuc" emailAddress="asdf@gmail.com" />
+            <ProfileInfo name={name} emailAddress={emailAddress} />
           </div>
         </div>
       </div>
