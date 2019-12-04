@@ -8,7 +8,7 @@ import Footer from "./components/template/Footer";
 
 import NotFoundPage from "./components/pages/NotFoundPage";
 import HomePage from "./components/pages/HomePage";
-import ProfilePage from "./components/pages/ProfilePage";
+import ProfilePage from "./components/profile/ProfilePage";
 
 class App extends React.Component {
   static propTypes = {
