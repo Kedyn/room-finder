@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import ProfileArea from "./ProfileArea";
 import dog from "golden-retriever-puppy.jpg";
-import avatar from "./App.css";
+import avatar from "./Profile.css";
 
 class ProfilePage extends Component {
   render() {
