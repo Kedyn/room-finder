@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ProfileInfo from "./ProfileArea";
 import dog from "golden-retriever-puppy.jpg";
 import ProfilePicture from "./ProfilePicture";
+import ProfileRoom from "./ProfileRoom";
 
 class ProfilePage extends Component {
   state = {
@@ -19,6 +20,7 @@ class ProfilePage extends Component {
           </div>
           <div className="col s12 m6 offset-m1">
             <ProfileInfo name={name} emailAddress={emailAddress} />
+            <ProfileRoom />
           </div>
         </div>
       </div>

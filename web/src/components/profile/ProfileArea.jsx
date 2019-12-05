@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
 const ProfileInfo = props => {
-  const { name, emailAddress } = props;
+  const { name, emailAddress, gender } = props;
   return (
     <div>
       <p>
